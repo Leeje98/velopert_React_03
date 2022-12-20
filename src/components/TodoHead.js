@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { useTodoState } from '../TodoContext'
 
 
 const TodoTemplateBlock = styled.div`
@@ -27,8 +28,11 @@ const TodoTemplateBlock = styled.div`
 `
 
 
-
 function TodoHead() {
+  // context API사용
+  const todos = useTodoState();
+  console.log(todos);
+
   return (
     <TodoTemplateBlock>
       <h1>2022년 12월 19일</h1>
